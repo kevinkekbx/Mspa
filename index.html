@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+     <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=2.0, user-scalable=no" />
+ 	<link href="static/css/page.css" rel="stylesheet">
+    <style>
+        ul li {
+            list-style: none;
+            height: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+	<div style="width:100%">
+	<div style="margin:0px auto;text-align: center;">		
+		<div id="section_container">
+			<section id="index_section" class="app-page app-page-section" data-page="home">
+    <ul>
+        <li  class="app-button" data-link="1.html" data-titleTxt="1.html" data-target="two_section">1</li>
+        <li class="app-button" data-link="2.html" data-titleTxt="2.html"  data-target="two_section">2</li>
+        <li class="app-button" data-link="3.html" data-titleTxt="3.html" data-target="two_section">3</li>
+        <li class="app-button" data-link="4.html" data-titleTxt="4.html"  data-target="two_section">4</li>
+    </ul>
+    
+	</section>
+	<div id="section_container_mask"></div>
+	</div>
+    </div>
+    </div>
+</body>
+</html>
+  <script src="static/js/jquery-1.10.2.min.js"></script>
+    <script src="static/js/mspa.min.js"></script>    
+    	<script type="text/javascript">
+			$.each($(".app-button"),function(){
+				$(this).CutScreen({
+					effect:'left',
+				init:function(dom){
+					dom.find(".open500").CutScreen({
+						init : function(dom2){
+							dom2.find(".open_tip").CutScreen({template:true,init:function($dom){
+								var _this = this;
+								var $a = $("<a>",{text:"!2131"}).one("click",function(){
+									_this.back($(this))
+								});
+								$dom.append($a)
+							}})
+						}
+					})
+				}
+			})
+		});
+
+	</script>
