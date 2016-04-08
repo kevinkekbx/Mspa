@@ -22,10 +22,10 @@
 		<div id="section_container">
 			<section id="index_section" class="app-page app-page-section" data-page="home">
     <ul>
-        <li  class="app-button" data-link="1.html" data-titleTxt="1.html" data-target="two_section">1</li>
-        <li class="app-button" data-link="2.html" data-titleTxt="2.html"  data-target="two_section">2</li>
-        <li class="app-button" data-link="3.html" data-titleTxt="3.html" data-target="two_section">3</li>
-        <li class="app-button" data-link="4.html" data-titleTxt="4.html"  data-target="two_section">4</li>
+        <li  class="app-button" data-link="1.html" data-titleTxt="1" data-target="two_section">1</li>
+        <li class="app-button" data-link="2.html" data-titleTxt="2"  data-target="two_section">2</li>
+        <li class="app-button" data-link="3.html" data-titleTxt="3" data-target="two_section">3</li>
+        <li class="app-button" data-link="4.html" data-titleTxt="4"  data-target="two_section">4</li>
     </ul>
     
 	</section>
@@ -39,10 +39,10 @@
     <script src="static/js/mspa.min.js"></script>    
     	<script type="text/javascript">
 			$.each($(".app-button"),function(){
-				$(this).CutScreen({
+				$(this).Mspa({
 					effect:'left',
 				init:function(dom){
-					dom.find(".open500").CutScreen({
+					dom.find(".open500").Mspa({
 						init : function(dom2){
 							dom2.find(".open_tip").CutScreen({template:true,init:function($dom){
 								var _this = this;
